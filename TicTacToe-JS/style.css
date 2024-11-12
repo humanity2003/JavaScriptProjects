@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body{
+    background: #ffa585;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+
+.container{
+    height: 70vh;
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+    
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    font-size: 8vmin;
+    background-color: antiquewhite; /* Background color for contrast */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    transition: transform 0.1s ease, background-color 0.1s ease; /* Smooth transition */
+}
+
+.box:hover {
+    background-color: #f5deb3; /* Light Wheat color on hover */
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.button:hover {
+    background-color: darkblue; /* Slightly darker on hover */
+}
+
+.winning-box {
+    background-color: #90ee90; /* Light green background */
+    font-weight: bold;
+    transform: scale(1.1); /* Slight scale-up to emphasize */
+}
+
+#msg{
+    margin: 10px;
+}
+
+.msg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: fixed; /* Keeps the message fixed on top */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden; /* Initially hidden */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white to overlay content */
+    z-index: 10; /* Ensures it stays on top of other elements */
+    text-align: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Smooth fade-in effect */
+}
+
+.msg-container.show {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s; /* Removes delay when showing */
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .box {
+        height: 100vh;
+        width: 14vmin;
+        font-size: 6vmin;
+        margin: 50px;
+    }
+    .container {
+        width: 90vw; /* More flexible width */
+        height: 90vw;
+    }
+}
