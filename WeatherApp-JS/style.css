@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", serif;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    margin: 2rem auto;
+    width: min-content;
+    background-color: white;
+    height: min-content;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.weather-header{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.weather-header input{
+    width: 350px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(189, 225, 225);
+    font-size: 2.2rem;
+}
+
+.weather-header .btn{
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(189, 225, 225);
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.weather-header .btn:hover {
+    background-color: rgb(159, 200, 200); /* Slightly darker */
+    cursor: pointer;
+}
+
+.city-not-found{
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.city-not-found h1{
+    font-size: 1.2rem;
+    flex-direction: column;
+    margin-block-end: 1rem;
+    color:rgb(241, 12, 12)
+}
+
+.weather-body{
+    display: none;
+    flex-direction: column;
+}
+
+img{
+    width: 300px;
+}
+
+.weather-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.weather-card p{
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.weather-card p sup{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 700;
+    top: 15px;
+}
+
+.weather-card span{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: -12px;
+}
+
+.weather-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.weather-detail{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-detail i{
+    font-size: 2.3rem;
+    color: #4682b4;
+}
+
+.humidity p:first-child, .wind p:first-child{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+    .weather-header input {
+        font-size: 1.5rem;
+        width: 250px;
+    }
+
+    .weather-card p {
+        font-size: 2rem;
+    }
+
+    .weather-detail i {
+        font-size: 1.8rem;
+    }
+}
+
+
+
