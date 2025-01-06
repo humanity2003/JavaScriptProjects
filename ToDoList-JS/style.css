@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    padding: 2rem 2rem;
+}
+
+.task-form{
+    margin: 1.3rem 0;
+}
+
+h1{
+    text-align: center;
+}
+
+#task-input{
+    padding: 0.4rem 0.3rem;
+    width: 20rem;
+}
+
+div.task-form select{
+    padding: 0.4rem 0.4rem;
+    margin-inline: 0.3rem;
+}
+
+button{
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.5rem;
+    height: 2rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+button:hover{
+    color: rgb(224, 234, 217);
+    background-color: #01438a;
+    cursor: pointer;
+
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+    background-color: navy;
+  }
+
+  button:focus {
+    outline: 3px solid orange;
+  }
+
+.sort-options{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.task-item{
+    list-style: none;
+    background-color: rgba(244, 228, 223, 0.3);
+    padding: 0.4rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    margin-bottom: 0.4rem; 
+}
+
+.task-section li span{
+    flex:1;
+}
+
+.task-section li button{
+    color: white;
+    background-color: rgba(255, 7, 61, 0.8);
+    font-weight: 600;
+}
+
+.task-section li button:hover{
+    color: white;
+    background-color: rgba(118, 5, 29, 0.962);
+    font-weight: 600;
+}
+
+.edit-mode{
+    background-color: #fffbcc; /* Light yellow */
+    border: 2px solid #ffc107; /* Golden border */
+}
